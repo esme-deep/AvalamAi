@@ -1,5 +1,8 @@
-# AvalamAi
 
+
+#authors : 
+Asmae MALOULI 18185
+Olivia KINNEN 17401
 
 la stratégie est la suivante : 
 
@@ -14,7 +17,4 @@ on a aussi essayé de ne pas jouer en ordre( du haut vers  le bas et droite vers
 
 
 
-#authors : 
-Asmae MALOULI 18185
-Olivia KINNEN 17401
 
