@@ -59,6 +59,7 @@ class Server:
         #point d'arrivée:
         a2 = action["move"]["to"][0]
         b2 = action["move"]["to"][1]
+        #un coup qui mène vers 5 comme longuer avec notre couleur au dessus.
         if len(self.matrice[a1][b1])+ len(self.matrice[a2][b2])==5 and self.matrice[a1][b1][-1]==pion :
             return True
     def IsItGood(self,action):  #voir si on respecte les régles du jeu
@@ -70,7 +71,7 @@ class Server:
         b2 = action["move"]["to"][1]
 
         #vu qu'on fait des soustractions/additions aux indices : on check si on tombe sur un indice negatif ou plus grand que la taille des lignes/colonnes 
-        #ou on change pas de place du tout ou on essaye de faire un coup eloigés de la cases
+        #ou on change pas de place du tout ou on essaye de faire un coup eloigés de la case
         if a1 < 0 or b1 < 0 or a2 < 0 or b2 < 0 or a1 >= self.lignes or b1 >= self.colonnes or a2 >= self.lignes or b2 >= self.colonnes or (a1 == a2 and b1 == b2) or (abs(a1-a2) > 1) or (abs(b1-b2) > 1):
             return False 
 
@@ -80,7 +81,7 @@ class Server:
 
         h1=len( self.matrice[a1][b1])
         h2=len( self.matrice[a2][b2])
-        #on sait pas deplacer un pion sur une case vide ou un qui contient 5 pion deja 
+        #on sait pas deplacer un pion sur une case vide ou un qui contient 5 pions deja 
         #on sait pas deplacer un tour de 5 non plus
         if h1 <= 0 or h1 >= 5 or h2 <= 0 or h2 >= 5 or h1+h2 > 5 :
             return False
